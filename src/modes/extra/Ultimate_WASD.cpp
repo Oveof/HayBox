@@ -28,7 +28,7 @@ void Ultimate_WASD::UpdateDigitalOutputs(InputState &inputs, OutputState &output
     outputs.select = inputs.select;
     outputs.home = inputs.home;
 
-    output.leftStickClick = input.up;
+    outputs.leftStickClick = inputs.up;
 
     // Turn on D-Pad layer by holding Mod X + Mod Y or Nunchuk C button.
     if ((inputs.mod_x && inputs.mod_y) || inputs.nunchuk_c) {
