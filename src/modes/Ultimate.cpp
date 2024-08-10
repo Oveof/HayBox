@@ -19,6 +19,7 @@ void Ultimate::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.a = inputs.a;
     outputs.b = inputs.b;
     outputs.x = inputs.x;
+    outputs.leftStickClick = inputs.up2;
     outputs.y = inputs.y;
     outputs.buttonL = inputs.lightshield;
     outputs.buttonR = inputs.z || inputs.midshield;

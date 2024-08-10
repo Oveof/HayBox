@@ -1,4 +1,4 @@
-/* Ultimate2 profile by Taker */
+/* Ultimate2 profile by ove */
 #include "modes/extra/Ultimate2.hpp"
 
 #define ANALOG_STICK_MIN 28
@@ -20,6 +20,7 @@ void Ultimate2::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.b = inputs.b;
     outputs.x = inputs.x;
     outputs.y = inputs.y;
+    outputs.rightStickClick = inputs.up2;
     outputs.buttonR = inputs.z;
     outputs.triggerLDigital = inputs.l;
     outputs.triggerRDigital = inputs.r;

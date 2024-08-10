@@ -23,7 +23,7 @@ void FgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
 
     // Menu keys
     outputs.start = inputs.start;
-    //outputs.select = inputs.c_left;
+    outputs.select = inputs.mod_y;
     //outputs.home = inputs.c_down;
 
     // Right hand bottom row
@@ -38,6 +38,7 @@ void FgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.buttonR = inputs.lightshield;
     outputs.buttonL = inputs.midshield;
     outputs.leftStickClick = inputs.l;
+    outputs.rightStickClick = inputs.r;
 }
 
 void FgcMode::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {

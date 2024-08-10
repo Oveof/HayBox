@@ -9,6 +9,7 @@
 #include "modes/RivalsOfAether.hpp"
 #include "modes/Ultimate.hpp"
 #include "modes/extra/Ultimate_WASD.hpp"
+#include "modes/extra/Celeste.hpp"
 
 extern KeyboardMode *current_kb_mode;
 
@@ -55,6 +56,8 @@ void select_mode(CommunicationBackend *backend) {
             set_mode(backend, new RivalsOfAether(socd::SOCD_2IP));
         } else if (inputs.up2) {
             set_mode(backend, new Ultimate_WASD(socd::SOCD_2IP));
+        } else if (inputs.up) {
+            set_mode(backend, new Celeste(socd::SOCD_2IP));
         }
     } else if (inputs.mod_y && !inputs.mod_x && inputs.start) {
         if (inputs.l) {
