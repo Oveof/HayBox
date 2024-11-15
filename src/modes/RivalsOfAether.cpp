@@ -20,6 +20,7 @@ void RivalsOfAether::UpdateDigitalOutputs(InputState &inputs, OutputState &outpu
     outputs.x = inputs.x;
     outputs.y = inputs.y;
     outputs.buttonR = inputs.z;
+    outputs.buttonL = inputs.up2;
     if (inputs.nunchuk_connected) {
         // Lightshield with C button.
         if (inputs.nunchuk_c) {
@@ -87,7 +88,7 @@ void RivalsOfAether::UpdateAnalogOutputs(InputState &inputs, OutputState &output
         /* Extra DI, Air Dodge, and Up B angles */
         if (directions.diagonal) {
             outputs.leftStickX = 128 + (directions.x * 59);
-            outputs.leftStickY = 128 + (directions.y * 23);
+            outputs.leftStickY = 128 + (directions.y * 25);
 
             // Angles just for DI and Up B
             if (inputs.c_down) {

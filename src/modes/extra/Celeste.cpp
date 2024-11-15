@@ -15,12 +15,16 @@ void Celeste::UpdateKeys(InputState &inputs) {
 
         //Jump
         Press(HID_KEY_C, inputs.x);
+        Press(HID_KEY_K, inputs.y);
 
         //Grab&Climb
         Press(HID_KEY_Z, inputs.l);
 
         //Dash
         Press(HID_KEY_X, inputs.b);
+
+        //Demodash
+        Press(HID_KEY_J, inputs.r);
 
         //Crouch Dash
         Press(HID_KEY_N, inputs.z);
@@ -34,19 +38,20 @@ void Celeste::UpdateKeys(InputState &inputs) {
         //Journal
         Press(HID_KEY_TAB, inputs.up);
 
-        //Save points
-        Press(HID_KEY_F7, inputs.r);
-        Press(HID_KEY_F8, inputs.y);
-        Press(HID_KEY_F4, inputs.midshield);
-
-        //Map
-        Press(HID_KEY_F6, inputs.lightshield);
     }
 
     if (inputs.mod_y) {
         //Room movement
-        Press(HID_KEY_PAGE_DOWN, inputs.x);
-        Press(HID_KEY_PAGE_UP, inputs.y);
+        Press(HID_KEY_PAGE_UP, inputs.r);
+        Press(HID_KEY_PAGE_DOWN, inputs.y);
+
+        //Save points
+        Press(HID_KEY_F7, inputs.b);
+        Press(HID_KEY_F8, inputs.x);
+        Press(HID_KEY_F4, inputs.z);
+
+        //Map
+        Press(HID_KEY_F6, inputs.up);
     }
 
 
