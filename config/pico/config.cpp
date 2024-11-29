@@ -110,11 +110,12 @@ void setup() {
             backends = new CommunicationBackend *[backend_count] {
                 primary_backend, new B0XXInputViewer(input_sources, input_source_count)
             };
-            delete current_kb_mode;
-            current_kb_mode = new Celeste(socd::SOCD_2IP);
+            //delete current_kb_mode;
+            //current_kb_mode = new Celeste(socd::SOCD_2IP);
 
             // Unset the current controller mode so backend only gives neutral inputs.
-            primary_backend->SetGameMode(nullptr);
+            //primary_backend->SetGameMode(nullptr);
+            //return;
             
         } else {
             // Default to XInput mode if no console detected and no other mode forced.
@@ -136,7 +137,6 @@ void setup() {
         backend_count = 1;
         backends = new CommunicationBackend *[backend_count] { primary_backend };
     }
-
     // Default to Rivals mode.
     primary_backend->SetGameMode(
         //new Melee20Button(socd::SOCD_2IP_NO_REAC, { .crouch_walk_os = false })

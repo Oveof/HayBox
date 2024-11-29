@@ -38,6 +38,8 @@ void Celeste::UpdateKeys(InputState &inputs) {
         //Journal
         Press(HID_KEY_TAB, inputs.up);
 
+        Press(HID_KEY_L, inputs.lightshield);
+
     }
 
     if (inputs.mod_y) {
